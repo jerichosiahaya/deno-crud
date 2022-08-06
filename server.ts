@@ -14,3 +14,4 @@ app.addEventListener("listen", ({ secure, hostname, port }) => {
 });
 
 await app.listen({ port });
+export default app;

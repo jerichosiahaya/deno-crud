@@ -8,7 +8,7 @@ export default {
         response.status = 200;
         response.body = todo;
     },
-    getByID: async ({response, params}: {response: any, params: {id: number}}) => {
+    getByID: async ({response, params}: {response: any, params: {id: string}}) => {
         const todoByID = await todos.findByID(params.id);
         console.log(todoByID);
         response.status = 200;

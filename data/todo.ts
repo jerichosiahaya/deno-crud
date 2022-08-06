@@ -9,4 +9,7 @@ export default {
         const result = await dbClient.query("select * from ?? where id = ?", ["todos", id]);
         return result;
     }
+    // deleteByID: async (id: any) => {
+    //     const result = 
+    // }
 };
