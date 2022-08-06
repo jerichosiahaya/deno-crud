@@ -28,3 +28,6 @@ DATABASE_PASSWORD=
 DATABASE_PORT=3306
 DATABASE_NAME=
 ```
+
+## Deployment
+GitHub integration using https://dash.deno.com/
