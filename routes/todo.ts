@@ -4,7 +4,7 @@ import todoController from "../controllers/todo.ts";
 const router = new Router();
 router
     .get('/', (context) => {
-        context.response.body = 'The server is alive! 🚀';
+        context.response.body = 'The server is alive! 🚀'; 
     })
     .get('/todos', todoController.getAll)
     .post("/todos", todoController.createTodo)
