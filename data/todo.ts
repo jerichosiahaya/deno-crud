@@ -5,4 +5,8 @@ export default {
         const result = await dbClient.query(`select * from todos`);
         return result;
     },
+    findByID: async (id: any) => {
+        const result = await dbClient.query("select * from ?? where id = ?", ["todos", id]);
+        return result;
+    }
 };
