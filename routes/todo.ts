@@ -6,7 +6,7 @@ router
     .get('/todos', todoController.getAll)
     .post("/todos", todoController.createTodo)
     .get("/todos/:id", todoController.getByID)
-    // .put("/todos/:id", todoController.update)
+    .put("/todos/:id", todoController.updateByID)
     .delete("/todos/:id", todoController.deleteByID);
 
 export default router;

@@ -17,5 +17,14 @@ export default {
     create: async (data: Todo) => {
         await dbClient.query("insert into todos(task) values (?)", [data.task]);
         return null;
+    },
+    updateByID: async (data:Todo) => {
+        const getData = await dbClient.query("select * from todos where id",[data.id]);
+        if (getData != null) {
+            await dbClient.query(`update todos set task = '${data.task}', done = ${data.done} where id = ${data.id}`);
+            return null
+        } else {
+            return "no match data had been found"
+        }
     }
 };

@@ -33,3 +33,14 @@ Deno.test("insert data", async () => {
     await response.body?.cancel();
     assertEquals(response.status, 200);
 });
+
+Deno.test("update data by id", async () => {
+    const body = `{"task": "update data via unit test", "done": 1}`;
+    const req = new Request(baseUrl + "todos/3", {
+        method: "PUT",
+        body
+    });
+    var response = await fetch(req,);
+    await response.body?.cancel();
+    assertEquals(response.status, 200);
+});
