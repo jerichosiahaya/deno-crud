@@ -13,3 +13,23 @@ Deno.test("get data by id", async () => {
     await response.body?.cancel();
     assertEquals(response.status, 200);
 });
+
+Deno.test("delete data by id", async () => {
+    const req = new Request(baseUrl + "todos/1", {
+        method: "DELETE",
+    });
+    var response = await fetch(req);
+    await response.body?.cancel();
+    assertEquals(response.status, 200);
+});
+
+Deno.test("insert data", async () => {
+    const body = `{"task": "unit-test-insert"}`;
+    const req = new Request(baseUrl + "todos", {
+        method: "POST",
+        body
+    });
+    var response = await fetch(req, );
+    await response.body?.cancel();
+    assertEquals(response.status, 200);
+});
