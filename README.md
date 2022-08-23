@@ -6,7 +6,7 @@ To run the unit test: <br>
 `deno test --allow-net`
 
 ## Database
-> MySQL@5.7
+> MySQL@5.7 
 
 Table schema:
 ```sql
